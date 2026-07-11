@@ -17,6 +17,13 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json());
 
 // Test Routes
+
+app.get("/",(req,res)=>{
+    res.send(
+        "Hello"
+    );
+});
+
 app.post("/api/echo", (req, res) => {
   res.json({ youSent: req.body });
 });
